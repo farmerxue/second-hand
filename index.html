@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>校园二手书交易平台</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-3.2.js"></script>
+	<script type="text/javascript">
+	var i = 0;
+	/*	function fun() {
+			var url = "img/carousel/" + i + ".jpg";
+			var sli = document.getElementById("sliderimg");
+			console.log(url);
+			sli.src=url;
+			i = (i + 1) % 3;
+			setInterval(fun,3000);
+		}*/
+		setInterval(() => {
+			var url = "img/carousel/" + i + ".jpg";
+			var sli = document.getElementById("sliderimg");
+		//	console.log(url);
+			sli.src=url;
+			i = (i + 1) % 4;
+		}, 3000);
+	</script>
+</head>
+
+<body >
+	<!-- 导航 -->
+	<header class="navbar">
+		<div class="nav-info">
+			<a href="myshelf.html" class="username">民大一条街</a>
+			<a href="myshelf.html" class="bookshelf">||&nbsp;&nbsp;&nbsp;购物车</a>
+			<a href="login.html" class="logout">[ 退 出 ]</a>
+		</div> <!-- nav-info -->
+		<form class="nav-search">
+			<a href="index.html"><img class="logo" src="img/logo2.png"></a>
+			<div class="search-form">
+				<a href="#" class="search-logo">| &nbsp;<img src="img/search.png"></a>
+				<input type="search" class="searchIn" placeholder="搜宝贝...">
+				<button class="searchBtn">搜索</button>
+			</div>
+		</form><!--  nav-search -->
+		<ul class="menu">
+			<li><a class="active" href="index.html">首页</a></li>
+			<li><a href="recent.html"">最新发布</a></li>
+			<li><a href="myshelf.html">个人主页</a></li>
+			<li><a href="#">兼职信息</a></li>
+		</ul>
+	</header>
+
+	<!-- 轮播 -->
+	<div class="carousel">
+		<div class="book-guide">
+			<h4>宝贝导航</h4>
+			<ul class="book-class">
+				<li><a href="#article" title="article">房屋出租 / 手机 / 图书</a></li>
+				<li><a href="#">键盘 / 鼠标 / 耳机</a></li>
+				<li><a href="#">平板 / 手表 / 硬盘</a></li>
+				<li><a href="#">自行车 /显示器 /散热板</a></li>
+				<li><a href="#">摩托车 / 女装 / 鞋子</a></li>
+				<li><a href="#">充电宝 / 球类 / 箱包</a></li>
+				<li><a href="#">教材 / 教辅 / 考试</a></li>
+				<li><a href="#technology" title="technology">跑腿代办 / IT服务</a></li>
+				<li><a href="#">游戏账号 / 技能服务</a></li>
+			</ul>
+		</div><!-- book-guide -->
+		<div class="slider">
+			<div class="slider-img">
+				<ul class="slider-img-ul">
+					<li><img id="sliderimg" src="img/carousel/0.jpg"></li>
+				</ul>
+			</div>
+		</div><!-- 	slider -->
+	</div><!-- carousel -->
+
+	<!-- 图书分类 -->
+	<div id="container">
+		<div class="book-part" id="article">
+			<h3 class="book-title"><a href="#">| 房屋出租 / 手机 / 图书</a></h3>
+			<a class="more" href="#"> > > 更多</a>
+			<ul class="book-lists">
+				<li class="book-list">
+					<a href="detail.html" class="book-pic">
+						<img src="img/index/1.jpg">
+					</a>
+					<a href="detail.html" class="book-info">
+						<h5 class="book-name">棉衣</h5>
+						<span class="book-detail">带毛棉服皮衣，闲置柜子太久了，清柜子50出了</span>
+					</a>
+					<span class="book-price">￥50.0
+						<a href="#" class="book-buy">立即下单</a>
+					</span>
+				</li>
+
+				<li class="book-list">
+					<a href="detail.html" class="book-pic">
+						<img src="img/index/2.jpg">
+					</a>
+					<a href="detail.html" class="book-info">
+						<h5 class="book-name">床上桌</h5>
+						<span class="book-detail">出床上桌，抽屉已坏，有意的提刀来砍</span>
+					</a>
+					<span class="book-price">￥50.0
+						<a href="#" class="book-buy">立即下单</a>
+					</span>
+				</li>
+
+				<li class="book-list">
+					<a href="detail.html" class="book-pic">
+						<img src="img/index/3.jpg">
+					</a>
+					<a href="detail.html" class="book-info">
+						<h5 class="book-name">键盘BOW</h5>
+						<span class="book-detail">BOW有线键盘，带大号鼠标垫，便宜出</span>
+					</a>
+					<span class="book-price">￥20.0
+						<a href="#" class="book-buy">立即下单</a>
+					</span>
+				</li>
+
+				<li class="book-list">
+					<a href="detail.html" class="book-pic">
+						<img src="img/index/4.jpg">
+					</a>
+					<a href="detail.html" class="book-info">
+						<h5 class="book-name">考研政治</h5>
+						<span class="book-detail">考研政治冲刺背诵笔记，带锦鲤背诵攻略，有意加我</span>
+					</a>
+					<span class="book-price">￥10.1
+						<a href="#" class="book-buy">立即下单</a>
+					</span>
+				</li>
+
+				<li class="book-list">
+					<a href="detail.html" class="book-pic">
+						<img src="img/index/5.jpg">
+					</a>
+					<a href="detail.html" class="book-info">
+						<h5 class="book-name">电动车</h5>
+						<span class="book-detail">小橘，入手半年，原价1k，半价出，不刀</span>
+					</a>
+					<span class="book-price">￥450.0
+						<a href="#" class="book-buy">立即下单</a>
+					</span>
+				</li>
+			</ul><!--  book-list end -->
+		</div><!--  book-part end -->
+	</div> <!-- container end-->
+	<footer>
+		<a href="#">©2020 二手书交易</a>
+		<a href="login.html">意见反馈&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;隐私权声明&nbsp;&nbsp;&nbsp;使用条款</a>
+	</footer>
+</body>
+
+
+
+</html>

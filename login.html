@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>校园二手书交易系统</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script type="text/javascript" src="js/jquery-3.2.js"></script>
+    <script>
+        
+            var root = "root";
+            var pas = "123456";
+            //点击button按钮处理
+            var btnn = document.getElementById("loginBtn");
+   
+        function fun(){
+            var user = $(".userName").val();
+            var pass = $(".password").val();
+            //回调函数
+            if (user == root && pas == pass) {
+                $("#loginstatu").attr("href", "index.html");
+            } else {
+                alert("信息错误！");
+            }
+            
+            }
+    </script>
+</head>
+
+<body>
+    <div id="login-container">
+        <h3>校园二手交易平台</h3>
+        <form>
+            <input type="text" name="userName" class="userName" placeholder="学号"><br />
+            <input type="password" name="password" class="password" placeholder="密码"><br />
+            <div class="ques">
+                <a class="logup" href="#">没有账号?</a><br />
+                <a class="forgetPass" href="#">忘记密码?</a><br />
+            </div>
+            <button class="loginBtn" id="loginBtn" onclick="fun()">
+                <a id="loginstatu" href="#">登录</a>
+            </button><br />
+        </form>
+    </div>
+</body>
+
+</html>

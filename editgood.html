@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>编辑商品信息</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/upload.css">
+</head>
+
+<body>
+	<!-- 导航条 -->
+	<nav class="navbar">
+		<div class="nav-menu">
+			<ul class="menu">
+				<li><a class="active" href="index.html">首页</a></li>
+				<li><a href="recent.html">最新发布</a></li>
+				<li><a href="myshelf.html">个人主页</a></li>
+				<li><a href="#">兼职信息</a></li>
+			</ul>
+		</div><!-- nav-menu -->
+
+		<form class="nav-search">
+			<input type="search" class="searchIn" placeholder="搜宝贝...">
+			<button class="search-logo"><img src="img/search2.png"></button>
+		</form>
+
+		<div class="nav-info">
+			<a href="myshelf.html" class="username">民大一条街</a>
+			<a href="myBookself.html" class="bookshelf">||&nbsp;&nbsp;&nbsp;购物车</a>
+			<a href="login.html" class="logout">[ 退 出 ]</a>
+		</div> <!-- nav-info-end -->
+	</nav>
+	<div class="titleName">
+		<h3>编辑商品信息</h3>
+	</div>
+
+	<div class="container">
+		<form>
+			<p>
+				<span class="pic-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				上传&nbsp;&nbsp;&nbsp;图片： <input type="file" name="book-pic" id="book-file">
+				<img id="book-pic" src="img/loadPic.png">
+			</p>
+			<p>
+				<span class="name-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：<input type="text" name="book-name">
+			</p>
+			<p>
+				<span class="author-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：<input type="text" name="book-author">
+			</p>
+			<p>
+				<span class="orign-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<input type="text" name="book-orign">
+			</p>
+			<p>
+				<span class="price-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<input type="text" name="book-price">
+			</p>
+
+			<p>
+				<span class="condition-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<input type="text" name="book-condition">
+			</p>
+			<p>
+				<span class="desc-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述：<input type="text" name="book-desc">
+			</p>
+
+			<input type="submit" class="submit-btn" name="book-submit">
+		</form>
+	</div>
+	<footer>
+		<a href="#">©2018-2019 二手书交易</a>
+		<a href="#">意见反馈&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;隐私权声明&nbsp;&nbsp;&nbsp;使用条款</a>
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.2.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$("#book-file").change(function () {
+				var fileS = this.files;
+				if (!fileS.length) {
+					return;
+				}
+				$("#book-pic").attr("src", window.URL.createObjectURL(fileS[0]));
+
+			});
+		});
+	</script>
+</body>
+
+</html>
